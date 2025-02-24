@@ -1,5 +1,13 @@
 def insertion_sort(array):
-    pass
+    if not array:
+        return array
+
+    for i in range(1, len(array)):
+        curr = i
+        while curr > 0 and array[curr-1] > array[curr]:
+            array[curr], array[curr-1] = array[curr-1], array[curr]
+            curr -= 1
+    return array
 
 
 def test_insertion_sort():
